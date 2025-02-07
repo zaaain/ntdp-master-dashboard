@@ -363,7 +363,7 @@ const Analytics = () => {
                                     <div className="top-right"></div>
                                     <div className="bottom-left"></div>
                                     <div className="bottom-right"></div>
-                                    <Card.Header>
+                                    <Card.Header className=" text-center justify-content-center border rounded-1 bg-grey pb-2 mb-4">
                                         <div className="card-title">{item.title}</div>
                                     </Card.Header>
                                     <Card.Body>
@@ -396,9 +396,9 @@ const Analytics = () => {
                                     <div className="bottom-left"></div>
                                     <div className="bottom-right"></div>
                                     <Card.Body>
-                                        <div className="d-flex align-items-start justify-content-between mb-0.1 pt-0.1">
+                                        <div className="d-flex align-items-center justify-content-center mb-0.1 pt-0.1">
                                             <div>
-                                                <span className="d-block text-muted mb-3">{item.title}</span>
+                                                <span className="d-block text-muted text-center mb-3">{item.title}</span>
                                                 <Card.Header className="fw-bold text-center border rounded-3  bg-gray">
                                                 <h3 className="fw-semibold">{item.value}</h3>
                                                 </Card.Header>
@@ -480,29 +480,44 @@ const Analytics = () => {
                     </Card>
                 </Col>
             </Row>
-            <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3">
-            <Row className="g-4 py-3">
-                {[
-                    { title: "Universities", image: "img.jpg" },
-                    { title: "Financial", image: "financial.jpg" },
-                    { title: "Accelerators", image: "Accelerators.jpg" },
-                    { title: "Government", image: "Government.jpg" },
-                    { title: "Investors", image: "Investors.jpg" },
-                    { title: "Startups", image: "Startups.jpg" },
-                ].map((item, index) => (
-
-                   <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={12} className="d-flex flex-column align-items-center">
-                        <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
-                        <img
-                            src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/${item.image}`}
+            <Row>
+            <Col xs={12}>
+                <h3 className="fw-semibold text-center py-2 mb-2">Partners</h3>
+            </Col>
+                <Col xs={12}>
+                    <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3 mt-4">
+                    <Row className="g-4 py-3">
+                        {[
+                        { title: "Universities", image: "img.jpg" },
+                        { title: "Financial", image: "financial.jpg" },
+                        { title: "Accelerators", image: "Accelerators.jpg" },
+                        { title: "Government", image: "Government.jpg" },
+                        { title: "Investors", image: "Investors.jpg" },
+                        { title: "Startups", image: "Startups.jpg" },
+                        ].map((item, index) => (
+                        <Col
+                            key={index}
+                            xxl={4}
+                            xl={4}
+                            lg={4}
+                            md={6}
+                            sm={12}
+                            className="d-flex flex-column align-items-center"
+                        >
+                            <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
+                            <img
+                            src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/images/brand-logos/${item.image}`}
                             alt={item.title}
                             className="img-fluid w-100 rounded shadow"
                             style={{ maxHeight: "200px", objectFit: "contain" }}
-                        />
-                    </Col>
-                ))}
-            </Row>
-            </Card>
+                            />
+                        </Col>
+                        ))}
+                    </Row>
+                    </Card>
+                </Col>
+                </Row>
+
         </Fragment>
     );
 };
