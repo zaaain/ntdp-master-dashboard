@@ -682,7 +682,8 @@ export class SessionSource extends Component {
                     },
                     formatter: (seriesName, opts) => {
                         const index = opts.seriesIndex;
-                        return `${this.state.labels[index]} - ${this.state.series[index]}`;
+                        return `<b style="font-size:18px;">${this.state.labels[index]} - ${this.state.series[index]}</b>`;
+
                     }
                 },
                 stroke: {
@@ -750,7 +751,7 @@ export class SessionSource extends Component {
                 series={this.state.series} 
                 type="donut" 
                 width={"100%"} 
-                height={320} 
+                height={350} 
             />
         );
     }

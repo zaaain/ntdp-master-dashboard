@@ -31,7 +31,8 @@ const Analytics = () => {
                 legend: { display: false },
             },
             scales: {
-                y: { beginAtZero: true },
+                y: { ticks: { color: "#ffffff" }, beginAtZero: true },
+                x: { ticks: { color: "#ffffff" } }
             },
         },
 
@@ -55,7 +56,8 @@ const Analytics = () => {
                 legend: { display: true, position: "top" },
             },
             scales: {
-                y: { beginAtZero: true },
+                y: { ticks: { color: "#ffffff" }, beginAtZero: true },
+                x: { ticks: { color: "#ffffff" } } // Change x-axis label color to white
             },
         },
     };
@@ -65,10 +67,10 @@ const Analytics = () => {
     return (
         <Fragment>
             <Seo title={"Analytics"} />
-            <h3 className="fw-semibold" style={{ display: "flex", justifyContent: "center", marginBottom: "60px" }}>NTDP</h3>
+            <h1 className="fw-bold" style={{ display: "flex", textSize: "48px", justifyContent: "center", marginBottom: "60px" }}>NTDP Main DashBoard</h1>
             <Row>
 
-                <Col xxl={4} xl={12} className="">
+                <Col xxl={4} xl={12} className="" style={{ marginTop: "40px" }}>
 
                     <Row>
                         <Col xl={12}>
@@ -192,8 +194,9 @@ const Analytics = () => {
                                             <h3 className="fw-semibold" style={{ textAlign: "center" }}>11.2 B SAR</h3>
                                         </div>
                                         <div id="popTrades" className="text-center">
-                                            <PopTrades />
+                                            <PopTrades value={110} />
                                         </div>
+                                        <p style={{ color: "white" }}>of goal achieved</p>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -212,8 +215,9 @@ const Analytics = () => {
                                             {/* <span className="d-block">Increased By <span className="text-success">4.15%</span> this month</span> */}
                                         </div>
                                         <div id="popTrades" className="text-center">
-                                            <PopTrades value={75} />
+                                            <PopTrades value={170} />
                                         </div>
+                                        <p style={{ color: "white" }}>of goal achieved</p>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -232,8 +236,9 @@ const Analytics = () => {
                                             {/* <span className="d-block">Decreased By <span className="text-danger">0.45%</span> this month</span> */}
                                         </div>
                                         <div id="popTrades" className="text-center">
-                                            <PopTrades value={80} />
+                                            <PopTrades value={70} />
                                         </div>
+                                        <p style={{ color: "white" }}>of goal achieved</p>
                                     </div>
                                 </Card.Body>
                             </Card>
@@ -292,7 +297,8 @@ const Analytics = () => {
                 ].map((item, index) => (
                     <Col key={index} xxl={4} xl={4} lg={6} md={6} sm={12} xs={12}>
                         {/* Pillar Name */}
-                        <div className="text-center fw-bold py-2 mb-2">{item.pillar}</div>
+                        {/* <div className="text-center fw-bold py-2 mb-2"></div> */}
+                        <h3 className="fw-semibold text-center py-2 mb-2" style={{ display: "flex", justifyContent: "center" }}>{item.pillar}</h3>
 
                         {/* Card */}
                         <Card className="custom-card border rounded-4 shadow-sm p-3 bg-transparent">
@@ -326,7 +332,6 @@ const Analytics = () => {
                 <Col xxl={9} xl={12}>
                     <Row>
                         <h3 className="fw-semibold text-center">Impact Table</h3>
-
                         {[
                             {
                                 title: "INPUT",
@@ -363,12 +368,10 @@ const Analytics = () => {
                                     </Card.Header>
                                     <Card.Body>
                                         {item.highlights.map((highlight, i) => (
-                                            <h6 key={i} className="card-title fw-medium mb-2">
-                                                {highlight}
-                                            </h6>
+                                            <h6 key={i} className="card-title fw-medium mb-2" dangerouslySetInnerHTML={{ __html: highlight.replace(/(\d+[,.\d]*\s*[A-Za-z]*)/g, '<span class="fw-bold text-primary fs-5">$1</span>') }} />
                                         ))}
                                         {item.details.map((detail, i) => (
-                                            <p key={i} className="card-text mb-2">{detail}</p>
+                                            <p key={i} className="card-text mb-2" dangerouslySetInnerHTML={{ __html: detail.replace(/(\d+[,.\d]*\s*[A-Za-z]*)/g, '<span class="fw-bold text-primary fs-5">$1</span>') }} />
                                         ))}
                                     </Card.Body>
                                 </Card>
@@ -379,7 +382,9 @@ const Analytics = () => {
 
                 {/* Revenue and Fund Size Section */}
                 <Col xxl={3} xl={12}>
+
                     <Row className="gx-4">
+                        <h3 className="fw-semibold text-center" style={{ display: "" }}>{`GDP Impact`}</h3>
                         {[
                             { title: "Total Revenue", value: "355 B SAR" },
                             { title: "Total Fund size established", value: "234,234 SAR" },
@@ -415,7 +420,7 @@ const Analytics = () => {
                             <div className="card-title">No of Investment per stage</div>
                         </Card.Header>
                         <Card.Body>
-                            <Bar options={chartjsdata.Option2} data={chartjsdata.Data2} height='300px' />
+                            <Bar options={chartjsdata.Option2} data={chartjsdata.Data2} height='200px' />
                         </Card.Body>
                     </Card>
                 </Col>
@@ -429,7 +434,7 @@ const Analytics = () => {
                             <div className="card-title">Volume of Investment</div>
                         </Card.Header>
                         <Card.Body>
-                            <Line options={chartjsdata.Option1} data={chartjsdata.Data1} height='300px' />
+                            <Bar options={chartjsdata.Option1} data={chartjsdata.Data1} height='200px' />
                         </Card.Body>
                     </Card>
                 </Col>
@@ -468,13 +473,32 @@ const Analytics = () => {
                             <div id="sessions-device">
                                 <SessionSource />
                             </div>
+                            <div style={{ height: "24px" }} />
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
-            <Row>
-                <img src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/logosss.png`} alt="logo" className="desktop-logo" />
+            <Row className="g-4 py-3">
+                {[
+                    { title: "Universities", image: "img.jpg" },
+                    { title: "Financial", image: "financial.jpg" },
+                    { title: "Accelerators", image: "Accelerators.jpg" },
+                    { title: "Government", image: "Government.jpg" },
+                    { title: "Investors", image: "Investors.jpg" },
+                    { title: "Startups", image: "Startups.jpg" },
+                ].map((item, index) => (
+                    <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={12} className="d-flex flex-column align-items-center">
+                        <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
+                        <img
+                            src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/${item.image}`}
+                            alt={item.title}
+                            className="img-fluid w-100 rounded shadow"
+                            style={{ maxHeight: "200px", objectFit: "contain" }}
+                        />
+                    </Col>
+                ))}
             </Row>
+
         </Fragment>
     );
 };

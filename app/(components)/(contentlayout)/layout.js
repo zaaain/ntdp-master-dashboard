@@ -32,7 +32,7 @@ const ContentLayout = ({ children }) => {
   }
 
   return (
-    <>
+    <div style={{background:""}}>
       <Fragment>
         <div style={{ display: `${lateLoad ? 'block' : 'none'}` }}>
           <Swicther />
@@ -49,7 +49,7 @@ const ContentLayout = ({ children }) => {
           {/* <Backtotop /> */}
         </div>
       </Fragment>
-    </>
+    </div>
   );
 };
 
