@@ -341,7 +341,7 @@ const Analytics = () => {
                             {
                                 title: "OUTPUT",
                                 highlights: ["1,902", "Companies supported"],
-                                details: ["797 Startups Created", "2,197 Entrepreneurs supported", "154"],
+                                details: ["797 Startups Created", "2,197 Entrepreneurs supported"],
                             },
                             {
                                 title: "IMPACT",
