@@ -484,40 +484,140 @@ const Analytics = () => {
             <Col xs={12}>
                 <h3 className="fw-semibold text-center py-2 mb-2">Partners</h3>
             </Col>
-                <Col xs={12}>
-                    <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3 mt-4">
-                    <Row className="g-4 py-3">
-                        {[
-                        { title: "Universities", image: "img.jpg" },
-                        { title: "Financial", image: "financial.jpg" },
-                        { title: "Accelerators", image: "Accelerators.jpg" },
-                        { title: "Government", image: "Government.jpg" },
-                        { title: "Investors", image: "Investors.jpg" },
-                        { title: "Startups", image: "Startups.jpg" },
-                        ].map((item, index) => (
-                        <Col
-                            key={index}
-                            xxl={4}
-                            xl={4}
-                            lg={4}
-                            md={6}
-                            sm={12}
-                            className="d-flex flex-column align-items-center"
-                        >
-                            <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
-                            <img
-                            src={`${process.env.NODE_ENV === "production" ? basePath : ""}/assets/images/brand-logos/${item.image}`}
-                            alt={item.title}
-                            className="img-fluid w-100 rounded shadow"
-                            style={{ maxHeight: "200px", objectFit: "contain" }}
-                            />
-                        </Col>
-                        ))}
-                    </Row>
-                    </Card>
-                </Col>
-                </Row>
+            <Col xs={12}>
+  <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3 mt-4">
+    <Row className="g-4 py-3">
+      {[
+        { 
+            title: "Universities",
+            images: [
+                "Universities/1.png",
+                "Universities/2.png",
+                "Universities/3.png",
+            ] 
+        },
+        { 
+          title: "Financial", 
+          images: 
+          ["Financial Institutes/1.png",
+            "Financial Institutes/2.png",
+            "Financial Institutes/3.png",
 
+          ]
+         },
+        { 
+            title: "Accelerators", 
+            images: [
+                "Accelerators/1.png", 
+                "Accelerators/2.png",
+                "Accelerators/3.png",
+                "Accelerators/4.png",
+                "Accelerators/5.png",
+                "Accelerators/6.png",
+                "Accelerators/7.png",
+                "Accelerators/8.png",
+                "Accelerators/9.png",
+                "Accelerators/10.png",
+            ]},
+        {
+          title: "Government",
+          images: [
+            "government/1.png",
+            "government/2.png",
+            "government/3.png",
+            "government/4.png",
+            "government/5.png",
+            "government/6.png",
+            "government/7.png",
+            "government/8.png",
+            "government/9.png",
+            "government/10.png",
+            "government/11.png",
+            "government/12.png",
+            "government/13.png",
+            "government/14.png",
+            "government/15.png",
+            "government/16.png",
+            "government/17.png",
+          ],
+        },
+        {
+          title: "Investors",
+          images: [
+            "investor/1.png",
+            "investor/2.png",
+            "investor/3.png",
+            "investor/4.png",
+            "investor/5.png",
+            "investor/6.png",
+            "investor/7.png",
+            "investor/8.png",
+            "investor/9.png",
+            "investor/10.png",
+            "investor/11.png",
+            "investor/12.png",
+          ],
+        },
+        { 
+            title: "Startups", 
+            images:
+            [
+                "Incubating startups/1.png",
+                "Incubating startups/2.png",
+                "Incubating startups/3.png",
+                "Incubating startups/4.png",
+                "Incubating startups/5.png",
+                "Incubating startups/6.png",
+                "Incubating startups/7.png",
+                "Incubating startups/8.png",
+                "Incubating startups/9.png",
+                "Incubating startups/10.png",
+                "Incubating startups/11.png",
+                "Incubating startups/12.png",
+                "Incubating startups/13.png",
+                "Incubating startups/14.png",
+                
+            ] 
+        },
+      ].map((item, index) => (
+        <Col
+          key={index}
+          xxl={4}
+          xl={4}
+          lg={4}
+          md={6}
+          sm={12}
+          className="d-flex flex-column align-items-center"
+        >
+          <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
+          {item.images ? (
+            <Row className="g-2">
+              {item.images.map((img, i) => (
+                <Col key={i} xs={4} className="d-flex justify-content-center">
+                  <img
+                    src={`/assets/images/brand-logos/${img}`}
+                    alt={`${item.title} ${i + 1}`}
+                    className="img-fluid rounded shadow"
+                    style={{ maxHeight: "100%", objectFit: "contain" }}
+                  />
+                </Col>
+              ))}
+            </Row>
+          ) : (
+            <img
+              src={`/assets/images/brand-logos/${item.image}`}
+              alt={item.title}
+              className="img-fluid w-100 rounded shadow"
+              style={{ maxHeight: "200px", objectFit: "contain" }}
+            />
+          )}
+        </Col>
+      ))}
+    </Row>
+  </Card>
+</Col>
+
+            </Row>
         </Fragment>
     );
 };
