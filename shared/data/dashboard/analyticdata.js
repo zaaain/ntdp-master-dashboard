@@ -739,7 +739,8 @@ export class SessionSource extends Component {
                         </div>`;
                     }
                 },
-                colors: ["var(--primary-color)", "var(--primary06)"], // Maintain existing colors
+                // colors: ["var(--primary-color)", "var(--primary06)"], // Maintain existing colors
+                colors: ["#007bff", "#a855f7"], // ✅ Blue & Yellow Colors Applied
             }
         };
     }

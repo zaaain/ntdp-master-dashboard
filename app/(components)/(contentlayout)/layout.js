@@ -32,7 +32,7 @@ const ContentLayout = ({ children }) => {
   }
 
   return (
-    <div style={{background:""}}>
+    <div style={{background:"#020627"}}>
       <Fragment>
         <div style={{ display: `${lateLoad ? 'block' : 'none'}` }}>
           <Swicther />
