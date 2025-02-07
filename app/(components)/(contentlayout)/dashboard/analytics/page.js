@@ -107,7 +107,7 @@ const Analytics = () => {
                                         Top 5 Industries
                                     </div>
                                 </div>
-                                <Card.Body className=" p-0 pe-3">
+                                <Card.Body className="mt-2 p-0">
                                     <div id="website-traffic">
                                         <Analyticswebsite />
                                     </div>
@@ -396,10 +396,12 @@ const Analytics = () => {
                                     <div className="bottom-left"></div>
                                     <div className="bottom-right"></div>
                                     <Card.Body>
-                                        <div className="d-flex align-items-start justify-content-between">
+                                        <div className="d-flex align-items-start justify-content-between mb-0.1 pt-0.1">
                                             <div>
                                                 <span className="d-block text-muted mb-3">{item.title}</span>
+                                                <Card.Header className="fw-bold text-center border rounded-3  bg-gray">
                                                 <h3 className="fw-semibold">{item.value}</h3>
+                                                </Card.Header>
                                             </div>
                                         </div>
                                     </Card.Body>
@@ -478,6 +480,7 @@ const Analytics = () => {
                     </Card>
                 </Col>
             </Row>
+            <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3">
             <Row className="g-4 py-3">
                 {[
                     { title: "Universities", image: "img.jpg" },
@@ -487,7 +490,8 @@ const Analytics = () => {
                     { title: "Investors", image: "Investors.jpg" },
                     { title: "Startups", image: "Startups.jpg" },
                 ].map((item, index) => (
-                    <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={12} className="d-flex flex-column align-items-center">
+
+                   <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={12} className="d-flex flex-column align-items-center">
                         <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
                         <img
                             src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/${item.image}`}
@@ -498,7 +502,7 @@ const Analytics = () => {
                     </Col>
                 ))}
             </Row>
-
+            </Card>
         </Fragment>
     );
 };
