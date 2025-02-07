@@ -488,37 +488,6 @@ const Analytics = () => {
   <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3 mt-4">
     <Row className="g-4 py-3">
       {[
-        { 
-            title: "Universities",
-            images: [
-                "Universities/1.png",
-                "Universities/2.png",
-                "Universities/3.png",
-            ] 
-        },
-        { 
-          title: "Financial", 
-          images: 
-          ["Financial Institutes/1.png",
-            "Financial Institutes/2.png",
-            "Financial Institutes/3.png",
-
-          ]
-         },
-        { 
-            title: "Accelerators", 
-            images: [
-                "Accelerators/1.png", 
-                "Accelerators/2.png",
-                "Accelerators/3.png",
-                "Accelerators/4.png",
-                "Accelerators/5.png",
-                "Accelerators/6.png",
-                "Accelerators/7.png",
-                "Accelerators/8.png",
-                "Accelerators/9.png",
-                "Accelerators/10.png",
-            ]},
         {
           title: "Government",
           images: [
@@ -579,6 +548,38 @@ const Analytics = () => {
 
             ] 
         },
+        { 
+            title: "Accelerators", 
+            images: [
+                "Accelerators/1.png", 
+                "Accelerators/2.png",
+                "Accelerators/3.png",
+                "Accelerators/4.png",
+                "Accelerators/5.png",
+                "Accelerators/6.png",
+                "Accelerators/7.png",
+                "Accelerators/8.png",
+                "Accelerators/9.png",
+                "Accelerators/10.png",
+            ]},
+        
+        { 
+            title: "Universities",
+            images: [
+                "Universities/1.png",
+                "Universities/2.png",
+                "Universities/3.png",
+            ] 
+        },
+        { 
+          title: "Financial", 
+          images: 
+          ["Financial Institutes/1.png",
+            "Financial Institutes/2.png",
+            "Financial Institutes/3.png",
+
+          ]
+         }
       ].map((item, index) => (
         <Col
           key={index}
@@ -590,6 +591,8 @@ const Analytics = () => {
           className="d-flex flex-column align-items-center"
         >
           <h3 className="fw-semibold text-center py-2 mb-2">{item.title}</h3>
+          <Card className="custom-card flex-grow-1 border rounded-2 shadow-sm p-3 mt-4">
+
           {item.images ? (
             <Row className="g-2">
               {item.images.map((img, i) => (
@@ -610,7 +613,9 @@ const Analytics = () => {
               className="img-fluid w-100 rounded shadow"
               style={{ maxHeight: "200px", objectFit: "contain" }}
             />
+
           )}
+            </Card>
         </Col>
       ))}
     </Row>
