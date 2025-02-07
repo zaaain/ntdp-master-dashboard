@@ -40,12 +40,11 @@ const ContentLayout = ({ children }) => {
             <Header />
             {/* <Sidebar /> */}
             <div style={{marginTop:"120px"}}>
-              <div >
+              <div className="">
                 {children}
               </div>
             </div>
             {/* <Footer /> */}
-            <p className='flex py-3 flex mx-auto'> Copyright © 2025 NTDP All rights reserved </p>
           </div>
           {/* <Backtotop /> */}
         </div>

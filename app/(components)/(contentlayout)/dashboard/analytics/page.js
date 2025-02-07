@@ -15,57 +15,57 @@ const Analytics = () => {
     const chartjsdata = {
         // Bar Chart Data (Left Side)
         Data2: {
-          labels: ["Pre Seed", "Seed", "Pre-Series A", "Series A", "Pre-Series B", "Series B", "Series C", "IPO/Unicorn"],
-          datasets: [
-            {
-              label: "Count",
-              data: [126, 53, 5, 21, 2, 7, 3, 5], // Values from the image
-              backgroundColor: "#00d4ff", // Original color from your code
-              borderWidth: 1,
-            },
-          ],
+            labels: ["Pre Seed", "Seed", "Pre-Series A", "Series A", "Pre-Series B", "Series B", "Series C", "IPO/Unicorn"],
+            datasets: [
+                {
+                    label: "Count",
+                    data: [126, 53, 5, 21, 2, 7, 3, 5], // Values from the image
+                    backgroundColor: "#00d4ff", // Original color from your code
+                    borderWidth: 1,
+                },
+            ],
         },
         Option2: {
-          responsive: true,
-          plugins: {
-            legend: { display: false },
-          },
-          scales: {
-            y: { beginAtZero: true },
-          },
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+            },
+            scales: {
+                y: { beginAtZero: true },
+            },
         },
-      
+
         // Line Chart Data (Right Side)
         Data1: {
-          labels: ["Pre Seed", "Seed", "Pre-Series A", "Series A", "Pre-Series B", "Series B", "Series C", "IPO/Unicorn"],
-          datasets: [
-            {
-              label: "Volume (Mn SAR)",
-              data: [150, 320, 200, 450, 120, 800, 1000, 1400], // Approx values matching the trend
-              borderColor: "#a855f7", // Original color from your code
-              backgroundColor: "rgba(168, 85, 247, 0.5)", // Keeping transparency as in image
-              fill: true,
-              tension: 0.4, // Smooth curve
-            },
-          ],
+            labels: ["Pre Seed", "Seed", "Pre-Series A", "Series A", "Pre-Series B", "Series B", "Series C", "IPO/Unicorn"],
+            datasets: [
+                {
+                    label: "Volume (Mn SAR)",
+                    data: [150, 320, 200, 450, 120, 800, 1000, 1400], // Approx values matching the trend
+                    borderColor: "#a855f7", // Original color from your code
+                    backgroundColor: "rgba(168, 85, 247, 0.5)", // Keeping transparency as in image
+                    fill: true,
+                    tension: 0.4, // Smooth curve
+                },
+            ],
         },
         Option1: {
-          responsive: true,
-          plugins: {
-            legend: { display: true, position: "top" },
-          },
-          scales: {
-            y: { beginAtZero: true },
-          },
+            responsive: true,
+            plugins: {
+                legend: { display: true, position: "top" },
+            },
+            scales: {
+                y: { beginAtZero: true },
+            },
         },
-      };
-      
+    };
+
 
 
     return (
         <Fragment>
             <Seo title={"Analytics"} />
-            <h3 className="fw-semibold" style={{ display: "flex", justifyContent: "center",marginBottom:"60px"  }}>Master Dashboard</h3>
+            <h3 className="fw-semibold" style={{ display: "flex", justifyContent: "center", marginBottom: "60px" }}>NTDP</h3>
             <Row>
 
                 <Col xxl={4} xl={12} className="">
@@ -78,20 +78,21 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex align-items-start justify-content-between">
-                                        <div>
-                                            <span className="d-block text-muted mb-3">Products Launched</span>
-                                            <h3 className="fw-semibold">19</h3>
-                                            {/* <span className="d-block">Increased By <span className="text-success">0.2%</span> this month</span> */}
+                                    <div className="d-flex flex-column">
+                                        {/* Text Section */}
+                                        <div style={{}}>
+                                            <span className="d-block text-muted mb-3 text-center">Products Launched</span>
+                                            <h3 className="fw-semibold text-center">18</h3>
                                         </div>
-                                        {/* <div>
-                                            <span className="avatar bg-primary-transparent svg-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" /><circle cx="12" cy="8" opacity=".3" r="2.1" /><path d="M12 14.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1z" opacity=".3" /><path d="M12 13c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm6.1 5.1H5.9V17c0-.64 3.13-2.1 6.1-2.1s6.1 1.46 6.1 2.1v1.1zM12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6.1c1.16 0 2.1.94 2.1 2.1 0 1.16-.94 2.1-2.1 2.1S9.9 9.16 9.9 8c0-1.16.94-2.1 2.1-2.1z" /></svg>
-                                            </span>
+
+                                        {/* Graph Right Aligned */}
+                                        {/* <div id="popTrades" className="d-flex justify-content-end mt-auto">
+                                            <PopTrades value={18}/>
                                         </div> */}
                                     </div>
                                 </Card.Body>
                             </Card>
+
                         </Col>
                         <Col xl={12}>
                             <Card className="custom-card">
@@ -123,10 +124,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex align-items-start justify-content-between">
+                                    <div className="d-flex align-items-center justify-content-center">
                                         <div>
                                             <span className="d-block text-muted mb-3">GDP Contribution</span>
-                                            <h3 className="fw-semibold">10 B SAR</h3>
+                                            <h3 className="fw-semibold" style={{ textAlign: "center" }}>10 B SAR</h3>
                                             {/* <span className="d-block">Increased By <span className="text-success">0.2%</span> this month</span> */}
                                         </div>
                                         {/* <div>
@@ -145,10 +146,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex align-items-start justify-content-between">
+                                    <div className="d-flex  align-items-center justify-content-center">
                                         <div>
                                             <span className="d-block text-muted mb-3">Job creation</span>
-                                            <h3 className="fw-semibold">10</h3>
+                                            <h3 className="fw-semibold" style={{ textAlign: "center" }}>10K</h3>
                                             {/* <span className="d-block">Increased By <span className="text-success">4.15%</span> this month</span> */}
                                         </div>
                                     </div>
@@ -162,10 +163,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex align-items-start justify-content-between">
+                                    <div className="d-flex align-items-center justify-content-center">
                                         <div>
                                             <span className="d-block text-muted mb-3">Tech Unicorns</span>
-                                            <h3 className="fw-semibold">10K</h3>
+                                            <h3 className="fw-semibold" style={{ textAlign: "center" }}>10</h3>
                                             {/* <span className="d-block">Decreased By <span className="text-danger">0.45%</span> this month</span> */}
                                         </div>
                                         {/* <div>
@@ -185,10 +186,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex flex-column align-items-start justify-content-between">
+                                    <div className="d-flex flex-column align-items-center justify-content-between">
                                         <div>
                                             <span className="d-block text-muted mb-3">GDP Contribution</span>
-                                            <h3 className="fw-semibold">10 B SAR</h3>
+                                            <h3 className="fw-semibold" style={{ textAlign: "center" }}>11.2 B SAR</h3>
                                         </div>
                                         <div id="popTrades" className="text-center">
                                             <PopTrades />
@@ -204,10 +205,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex flex-column align-items-start justify-content-between">
+                                    <div className="d-flex flex-column align-items-center justify-content-between">
                                         <div>
                                             <span className="d-block text-muted mb-3">Job creation</span>
-                                            <h3 className="fw-semibold">10</h3>
+                                            <h3 className="fw-semibold" style={{ textAlign: "center" }}>17K</h3>
                                             {/* <span className="d-block">Increased By <span className="text-success">4.15%</span> this month</span> */}
                                         </div>
                                         <div id="popTrades" className="text-center">
@@ -224,10 +225,10 @@ const Analytics = () => {
                                 <div className="bottom-left"></div>
                                 <div className="bottom-right"></div>
                                 <Card.Body>
-                                    <div className="d-flex flex-column align-items-start justify-content-between">
+                                    <div className="d-flex flex-column align-items-center justify-content-between">
                                         <div>
                                             <span className="d-block text-muted mb-3">Tech Unicorns</span>
-                                            <h3 className="fw-semibold">10K</h3>
+                                            <h3 className="fw-semibold text-center">7</h3>
                                             {/* <span className="d-block">Decreased By <span className="text-danger">0.45%</span> this month</span> */}
                                         </div>
                                         <div id="popTrades" className="text-center">
@@ -243,31 +244,73 @@ const Analytics = () => {
             </Row>
             <Row className="gy-4">
                 {[
-                    "Growth Support",
-                    "Access to market",
-                    "Talent Support",
-                    "Innovation Support",
-                    "Financing Support",
-                ].map((title, index) => (
-                    <Col
-                        key={index}
-                        xxl={index < 3 ? 4 : 6}  // First 3 cards = 4 cols each, Last 2 = 6 cols each
-                        xl={index < 3 ? 4 : 6}
-                        lg={index < 3 ? 4 : 6}
-                        md={index < 3 ? 4 : 6}
-                        sm={12}
-                        xs={12}
-                    >
-                        <Card className="custom-card">
-                            <div className="top-left"></div>
-                            <div className="top-right"></div>
-                            <div className="bottom-left"></div>
-                            <div className="bottom-right"></div>
-                            <Card.Body>
-                                <div className="d-flex align-items-start justify-content-between">
-                                    <div>
-                                        <span className="d-block text-muted mb-3">{title}</span>
-                                        <h3 className="fw-semibold">10K</h3>
+                    {
+                        pillar: "Growth Support",
+                        title: "Relocate",
+                        data: [
+                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
+                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
+                            { value: "SAR 400 Mn", label: "Sales after relocation" },
+                        ],
+                    },
+                    {
+                        pillar: "Access to Market",
+                        title: "Boost",
+                        data: [
+                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
+                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
+                            { value: "SAR 400 Mn", label: "Sales after relocation" },
+                        ],
+                    },
+                    {
+                        pillar: "Talent Support",
+                        title: "TechCrew",
+                        data: [
+                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
+                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
+                            { value: "SAR 400 Mn", label: "Sales after relocation" },
+                        ],
+                    },
+                    {
+                        pillar: "Innovation Support",
+                        title: "NextEra",
+                        data: [
+                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
+                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
+                            { value: "SAR 400 Mn", label: "Sales after relocation" },
+                        ],
+                    },
+                    {
+                        pillar: "Financing Support",
+                        title: "LendTech",
+                        data: [
+                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
+                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
+                            { value: "SAR 400 Mn", label: "Sales after relocation" },
+                        ],
+                    },
+                ].map((item, index) => (
+                    <Col key={index} xxl={4} xl={4} lg={6} md={6} sm={12} xs={12}>
+                        {/* Pillar Name */}
+                        <div className="text-center fw-bold py-2 mb-2">{item.pillar}</div>
+
+                        {/* Card */}
+                        <Card className="custom-card border rounded-4 shadow-sm p-3 bg-transparent">
+                            {/* Title Box */}
+                            <Card.Header className="fw-bold text-center border rounded-3 py-2 bg-white">
+                                {item.title}
+                            </Card.Header>
+                            <Card.Body className="text-center">
+                                {/* Content Layout */}
+                                <div className="d-flex align-items-center justify-content-between p-2">
+                                    <div className="bg-primary text-white p-3 rounded flex-fill text-center">
+                                        {item.data.map((block, i) => (
+                                            <div key={i} className="mb-3">
+                                                <h4 className="fw-bold">{block.value}</h4>
+                                                <p className="m-0">{block.label}</p>
+                                                {i < item.data.length - 1 && <div className="fs-3 text-white">⬇️</div>}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </Card.Body>
@@ -275,6 +318,9 @@ const Analytics = () => {
                     </Col>
                 ))}
             </Row>
+
+
+
             <Row className="gy-4">
                 {/* Impact Table Section */}
                 <Col xxl={9} xl={12}>
@@ -388,8 +434,6 @@ const Analytics = () => {
                     </Card>
                 </Col>
             </Row>
-
-
             <Row>
                 <Col xl={9}>
                     <Card className="custom-card">
@@ -429,7 +473,7 @@ const Analytics = () => {
                 </Col>
             </Row>
             <Row>
-             <img src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/logosss.png`} alt="logo" className="desktop-logo" />
+                <img src={`${process.env.NODE_ENV === 'production' ? basePath : ''}/assets/images/brand-logos/logosss.png`} alt="logo" className="desktop-logo" />
             </Row>
         </Fragment>
     );
