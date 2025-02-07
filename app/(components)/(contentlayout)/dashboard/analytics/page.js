@@ -576,7 +576,7 @@ const Analytics = () => {
                 "Incubating startups/12.png",
                 "Incubating startups/13.png",
                 "Incubating startups/14.png",
-                
+
             ] 
         },
       ].map((item, index) => (
@@ -598,7 +598,7 @@ const Analytics = () => {
                     src={`/assets/images/brand-logos/${img}`}
                     alt={`${item.title} ${i + 1}`}
                     className="img-fluid rounded shadow"
-                    style={{ maxHeight: "100%", objectFit: "contain" }}
+                    style={{ maxHeight: "100px", objectFit: "contain" }}
                   />
                 </Col>
               ))}
