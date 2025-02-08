@@ -248,7 +248,8 @@ const Analytics = () => {
 
                 </Col>
             </Row>
-            <Row>
+            <Row className="d-flex justify-content-between">
+
                 <Col
                     xxl={2}
                     xl={2}
@@ -310,33 +311,43 @@ const Analytics = () => {
                     </Card>
                 </Col>
                 <Col
-                    xxl={3}
-                    xl={3}
-                    lg={3}
-                    md={3}
+                    xxl={2}
+                    xl={2}
+                    lg={2}
+                    md={2}
                     sm={12}
                     className="d-flex flex-column align-items-center"
                 >
                     <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Invotion Support`}</h6>
-                    <Card style={{height:"405px", display:"flex", justifyContent:"center", alignItems:"center"}} className="custom-card border rounded-2 shadow-sm p-3 mt-4">
-                 
-                            <h4 className="fw-semibold text-center py-2 mb-2">{`• AIM`}</h4>
-                            <h4 className="fw-semibold text-center py-2 mb-2">{`• NEXTEra`}</h4>
+                    <Card className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                        <img
+                            src={`/assets/images/brand-logos/NEXTERA-01.png`}
+                        />
+                        <img
+                            src={`/assets/images/brand-logos/NEXTERA-01.png`}
+                            className="mt-n10"
+
+                        />
                     </Card>
                 </Col>
                 <Col
-                    xxl={3}
-                    xl={3}
-                    lg={3}
-                    md={3}
+                    xxl={2}
+                    xl={2}
+                    lg={2}
+                    md={2}
                     sm={12}
                     className="d-flex flex-column align-items-center"
                 >
                     <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Financing Support`}</h6>
-                    <Card style={{height:"405px", display:"flex", justifyContent:"center", alignItems:"center"}} className="custom-card border rounded-2 shadow-sm p-3 mt-4">
-                 
-                            <h4 className="fw-semibold text-center py-2 mb-2">{`• Loan Guarantee`}</h4>
-                            <h4 className="fw-semibold text-center py-2 mb-2">{`• LendTech`}</h4>
+                    <Card className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                        <img
+                            src={`/assets/images/brand-logos/fund.png`}
+                        />
+                        <img
+                            src={`/assets/images/brand-logos/fund.png`}
+                            className="mt-n10"
+
+                        />
                     </Card>
                 </Col>
             </Row>
