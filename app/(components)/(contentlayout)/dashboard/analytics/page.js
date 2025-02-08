@@ -248,79 +248,99 @@ const Analytics = () => {
 
                 </Col>
             </Row>
+            <Row>
+                <Col
+                    xxl={2}
+                    xl={2}
+                    lg={2}
+                    md={2}
+                    sm={12}
+                    className="d-flex flex-column align-items-center"
+                >
+                    <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Growth Support`}</h6>
+                    <Card className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                        <img
+                            src={`/assets/images/brand-logos/growthSupport1.png`}
+                        />
+                        <img
+                            src={`/assets/images/brand-logos/growthSupport2.png`}
+                            className="mt-n10"
 
-            {/* <Row className="gy-4">
-                {[
-                    {
-                        pillar: "Growth Support",
-                        title: "Relocate",
-                        data: [
-                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
-                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
-                            { value: "SAR 400 Mn", label: "Sales after relocation" },
-                        ],
-                    },
-                    {
-                        pillar: "Access to Market",
-                        title: "Boost",
-                        data: [
-                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
-                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
-                            { value: "SAR 400 Mn", label: "Sales after relocation" },
-                        ],
-                    },
-                    {
-                        pillar: "Talent Support",
-                        title: "TechCrew",
-                        data: [
-                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
-                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
-                            { value: "SAR 400 Mn", label: "Sales after relocation" },
-                        ],
-                    },
-                    {
-                        pillar: "Innovation Support",
-                        title: "NextEra",
-                        data: [
-                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
-                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
-                            { value: "SAR 400 Mn", label: "Sales after relocation" },
-                        ],
-                    },
-                    {
-                        pillar: "Financing Support",
-                        title: "LendTech",
-                        data: [
-                            { value: "SAR 400 Mn", label: "Cumulative Investment closed after relocation" },
-                            { value: "32", label: "Founders, co-Founders and C-Level relocated" },
-                            { value: "SAR 400 Mn", label: "Sales after relocation" },
-                        ],
-                    },
-                ].map((item, index) => (
-                    <Col key={index} xxl={4} xl={4} lg={6} md={6} sm={12} xs={12}>
-                        <h3 className="fw-semibold text-center py-2 mb-2" style={{ display: "flex", justifyContent: "center" }}>{item.pillar}</h3>
-                        <Card className="custom-card border rounded-4 shadow-sm p-3 bg-transparent">
-                            <Card.Header className="fw-bold text-center border rounded-3 py-2 bg-white">
-                                {item.title}
-                            </Card.Header>
-                            <Card.Body className="text-center">
-                                <div className="d-flex align-items-center justify-content-between p-2">
-                                    <div className="bg-primary text-white p-3 rounded flex-fill text-center">
-                                        {item.data.map((block, i) => (
-                                            <div key={i} className="mb-3">
-                                                <h4 className="fw-bold">{block.value}</h4>
-                                                <p className="m-0">{block.label}</p>
-                                                {i < item.data.length - 1 && <div className="fs-3 text-white">⬇️</div>}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
-            </Row> */}
-            <Row style={{marginBottom:"10px"}}>
+                        />
+                    </Card>
+                </Col>
+                <Col
+                    xxl={2}
+                    xl={2}
+                    lg={2}
+                    md={2}
+                    sm={12}
+                    className="d-flex flex-column align-items-center"
+                >
+                    <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Access to market`}</h6>
+                    <Card className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                        <img
+                            src={`/assets/images/brand-logos/access1.png`}
+                        />
+                        <img
+                            src={`/assets/images/brand-logos/access1.png`}
+                            className="mt-n10"
+
+                        />
+                    </Card>
+                </Col>
+                <Col
+                    xxl={2}
+                    xl={2}
+                    lg={2}
+                    md={2}
+                    sm={12}
+                    className="d-flex flex-column align-items-center"
+                >
+                    <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Talent Support`}</h6>
+                    <Card className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                        <img
+                            src={`/assets/images/brand-logos/talent.png`}
+                        />
+                        <img
+                            src={`/assets/images/brand-logos/talent.png`}
+                            className="mt-n10"
+
+                        />
+                    </Card>
+                </Col>
+                <Col
+                    xxl={3}
+                    xl={3}
+                    lg={3}
+                    md={3}
+                    sm={12}
+                    className="d-flex flex-column align-items-center"
+                >
+                    <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Invotion Support`}</h6>
+                    <Card style={{height:"405px", display:"flex", justifyContent:"center", alignItems:"center"}} className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                 
+                            <h4 className="fw-semibold text-center py-2 mb-2">{`• AIM`}</h4>
+                            <h4 className="fw-semibold text-center py-2 mb-2">{`• NEXTEra`}</h4>
+                    </Card>
+                </Col>
+                <Col
+                    xxl={3}
+                    xl={3}
+                    lg={3}
+                    md={3}
+                    sm={12}
+                    className="d-flex flex-column align-items-center"
+                >
+                    <h6 className="fw-semibold border p-5 text-center py-2 mb-2">{`Financing Support`}</h6>
+                    <Card style={{height:"405px", display:"flex", justifyContent:"center", alignItems:"center"}} className="custom-card border rounded-2 shadow-sm p-3 mt-4">
+                 
+                            <h4 className="fw-semibold text-center py-2 mb-2">{`• Loan Guarantee`}</h4>
+                            <h4 className="fw-semibold text-center py-2 mb-2">{`• LendTech`}</h4>
+                    </Card>
+                </Col>
+            </Row>
+            <Row style={{ marginBottom: "10px" }}>
                 {/* Growth Support Section */}
                 <Col xxl={6} xl={12}>
                     <Col xl={12}>
@@ -529,76 +549,73 @@ const Analytics = () => {
                     </Col>
                 </Col>
                 <Col xxl={6} xl={12}>
-    <Col xl={12}>
-        <div className="container py-2 border rounded shadow-lg">
-            {/* Heading */}
-            <h3 className="text-center bg-transparent fw-semibold py-2 mb-4 rounded border">
-                Talent Support
-            </h3>
+                    <Col xl={12}>
+                        <div className="container py-2 border rounded shadow-lg">
+                            {/* Heading */}
+                            <h3 className="text-center bg-transparent fw-semibold py-2 mb-4 rounded border">
+                                Talent Support
+                            </h3>
 
-            <div className="d-flex justify-content-center w-100 gap-4">
-                {/* Boost Section */}
-                <Card className="custom-card p-4 border rounded shadow-lg text-white bg-transparent flex-fill h-100">
-                    <div className="border p-2 text-center fw-bold fs-5 rounded">
-                        Boost
-                    </div>
+                            <div className="d-flex justify-content-center w-100 gap-4">
+                                {/* Boost Section */}
+                                <Card className="custom-card p-4 border rounded shadow-lg text-white bg-transparent flex-fill h-100">
+                                    <div className="border p-2 text-center fw-bold fs-5 rounded">
+                                        Boost
+                                    </div>
 
-                    <div className="text-center mt-3">
-                        <p className="fw-bold fs-4">10.33%</p>
-                        <p className="small">Employment Growth</p>
-                    </div>
+                                    <div className="text-center mt-3">
+                                        <p className="fw-bold fs-4">10.33%</p>
+                                        <p className="small">Employment Growth</p>
+                                    </div>
 
-                    <hr className="border-white opacity-50" />
+                                    <hr className="border-white opacity-50" />
 
-                    <div className="text-center my-3">
-                        <p className="fw-bold fs-3">26,134,138 SAR</p>
-                        <p className="small">Revenue</p>
-                    </div>
+                                    <div className="text-center my-3">
+                                        <p className="fw-bold fs-3">26,134,138 SAR</p>
+                                        <p className="small">Revenue</p>
+                                    </div>
 
-                    <hr className="border-white opacity-50" />
+                                    <hr className="border-white opacity-50" />
 
-                    <div className="text-center mt-3">
-                        <p className="fw-bold fs-3">107</p>
-                        <p className="small">Number of startups</p>
-                    </div>
-                </Card>
+                                    <div className="text-center mt-3">
+                                        <p className="fw-bold fs-3">107</p>
+                                        <p className="small">Number of startups</p>
+                                    </div>
+                                </Card>
 
-                {/* TechCrew Section */}
-                <Card className="custom-card p-4 border rounded shadow-lg text-white bg-transparent flex-fill h-100">
-                    <div className="border p-2 text-center fw-bold fs-5 rounded">
-                        TechCrew
-                    </div>
+                                {/* TechCrew Section */}
+                                <Card className="custom-card p-4 border rounded shadow-lg text-white bg-transparent flex-fill h-100">
+                                    <div className="border p-2 text-center fw-bold fs-5 rounded">
+                                        TechCrew
+                                    </div>
 
-                    <div className="text-center mt-3">
-                        <p className="fw-bold fs-4">1,400,000 SAR</p>
-                        <p className="small">Revenue Raised</p>
-                    </div>
+                                    <div className="text-center mt-3">
+                                        <p className="fw-bold fs-4">1,400,000 SAR</p>
+                                        <p className="small">Revenue Raised</p>
+                                    </div>
 
-                    <hr className="border-white opacity-50" />
+                                    <hr className="border-white opacity-50" />
 
-                    <div className="text-center my-3">
-                        <p className="fw-bold fs-3">1.39%</p>
-                        <p className="small">Employment Growth</p>
-                    </div>
+                                    <div className="text-center my-3">
+                                        <p className="fw-bold fs-3">1.39%</p>
+                                        <p className="small">Employment Growth</p>
+                                    </div>
 
-                    <hr className="border-white opacity-50" />
+                                    <hr className="border-white opacity-50" />
 
-                    <div className="text-center mt-3">
-                        <p className="fw-bold fs-3">24</p>
-                        <p className="small">Supported companies</p>
-                    </div>
-                </Card>
-            </div>
-        </div>
-    </Col>
-</Col>
+                                    <div className="text-center mt-3">
+                                        <p className="fw-bold fs-3">24</p>
+                                        <p className="small">Supported companies</p>
+                                    </div>
+                                </Card>
+                            </div>
+                        </div>
+                    </Col>
+                </Col>
 
 
 
             </Row>
-
-
-
             <Row className="gy-4">
                 {/* Impact Table Section */}
                 <Col xxl={9} xl={12}>
@@ -619,7 +636,7 @@ const Analytics = () => {
                                 title: "IMPACT",
                                 details: ["SAR 4.8 Bn Investment enabled"],
                                 highlights: ["17K", "Jobs Created"]
-                               
+
                             },
                             {
                                 title: "INSIGHTS",
